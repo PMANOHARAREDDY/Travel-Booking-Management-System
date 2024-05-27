@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RVU-KSRTC</title>
+    <link rel="icon" type="image/x-icon" href="/static/OIP.jpg">
+    <link rel="stylesheet" href="/static/style.css">
+    <meta name="author" content="B PRANITH REDDY">
+</head>
+<body>
+    <h1><mark>Welcome to Karnataka State Road Transport Corporation</mark></h1>
+    <h3><a href="https://www.ksrtc.in" target="_blank">Book for sure</a></h3>
+    <h2>Currently available roots: </h2>
+    <ol style="font-size: x-large;color:rgb(0, 0, 0);"><b>
+        {% for bus in buses %}
+        <li>{{ bus.name }} - {{ bus.available_seats }} seats available <button><a href="{{ url_for('book', bus_id=bus.id) }}">Book</a></button></li>
+        {% endfor %}</b>
+    </ol>
+    <button><a href="{{ url_for('view_bookings') }}">View Bookings</a></button>
+</body>
+<footer>
+    <address>
+        <p><strong><b>P Manohara Reddy</b><br>
+        Transport Associate,<br>
+        KSRTC, Bangalore<br>
+        <a href="mailto:manoharareddyp97@gmail.com">Register complaints via mail</a></strong></p>
+    </address>
+</footer>
+</html>

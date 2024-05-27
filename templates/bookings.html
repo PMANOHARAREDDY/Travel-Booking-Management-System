@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bookings</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>{{Bookings}}</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Seats</th>
+            <th>Bus</th>
+        </tr>
+        {% for booking in bookings %}
+        <tr>
+            <td>{{ booking.name }}</td>
+            <td>{{ booking.seats }}</td>
+            <td>{{ get_bus_name(booking.bus_id) }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

@@ -1,0 +1,27 @@
+body{
+    background-image: url("ksrtc1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h1{
+    color: black;
+    float:right;
+
+}
+
+address{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    background-color: #f1f1f1;
+    background-image: url('/static/OIP.jpg');
+    background-size: cover;
+}
+
+img{
+    height: 300px;
+    float: right;
+}
