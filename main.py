@@ -45,12 +45,9 @@ def book(bus_id):
             return redirect(url_for("index"))
     return render_template("book.html", bus=next((bus for bus in buses if bus["id"] == bus_id), None))
 
-@app.route('/view_bookings')
+@app.route("/bookings")
 def view_bookings():
-    # Logic to retrieve bookings (e.g., from a database)
-    bookings = get_bookings()  # Replace with your actual data retrieval logic
-    return render_template("bookings.html", bookings=bookings, get_bus_name=get_bus_name)
-
+    return render_template("bookings.html", bookings=bookings)
 
 @app.template_filter('get_bus_name')
 def get_bus_name(bus_id):
